@@ -15,6 +15,17 @@ function NavLink (props: NavLinkProps) {
     )
 }
 
+//création du menu hamburger
+function HamburgerMenu({onClick}: {onClick: () => void}) {
+    return(<div className="flex-col gap-[5px] cursor-pointer md:hidden"
+        id="hamburgermenu"
+        onClick={onClick}>
+            <span className="w-[25px] h-[3px] bg-[#66366d] rounded-xs"></span>
+            <span className="w-[25px] h-[3px] bg-[#66366d] rounded-xs"></span>
+            <span className="w-[25px] h-[3px] bg-[#66366d] rounded-xs"></span>
+        </div>
+    )
+}
 export default function Navbar() {
   return (
     <nav className = "bg-purple-400 text-purple-950 shadow-xl">
