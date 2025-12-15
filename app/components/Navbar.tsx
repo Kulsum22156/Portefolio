@@ -1,6 +1,6 @@
-
+"use client";
 import Link from "next/link";
-import {type ReactNode} from "react";
+import {useState, type ReactNode} from "react";
 
 type NavLinkProps = {
     href : string
@@ -17,22 +17,28 @@ function NavLink (props: NavLinkProps) {
 
 //création du menu hamburger
 function HamburgerMenu({onClick}: {onClick: () => void}) {
-    return(<div className="flex-col gap-[5px] cursor-pointer md:hidden"
+    return(<div className="flex flex-col gap-[5px] cursor-pointer md:hidden"
         id="hamburgermenu"
         onClick={onClick}>
-            <span className="w-[25px] h-[3px] bg-[#66366d] rounded-xs"></span>
-            <span className="w-[25px] h-[3px] bg-[#66366d] rounded-xs"></span>
-            <span className="w-[25px] h-[3px] bg-[#66366d] rounded-xs"></span>
+            <span className="w-[25px] h-[3px] bg-[#e6d5e8] rounded-xs"></span>
+            <span className="w-[25px] h-[3px] bg-[#e6d5e8] rounded-xs"></span>
+            <span className="w-[25px] h-[3px] bg-[#e6d5e8] rounded-xs"></span>
         </div>
-    )
+    );
 }
 export default function Navbar() {
-  return (
-    <nav className = "bg-purple-400 text-purple-950 shadow-xl">
-        <ul className = "container mx-auto flex gap-4">
-            <li><Link href="/">Accueil</Link></li>
-            <li><Link href="/CV">CV</Link></li>
-        </ul>
-    </nav>
+
+    const [isOpen, setIsOpen] = useState(false);
+    return (
+        <nav className = "bg-purple-950 text-purple-50 shadow-xl">
+            <div className="flex text-xl justify-between font-bold text-fuchsia-50">
+                <div className="text-xl font-bold ">Umme Kulsum</div>
+                <HamburgerMenu onClick={() => setIsOpen(!isOpen)}/></div>
+            <ul className = {`container mx-auto flex gap-4
+            ${isOpen? "flex" : "hidden"} justify-center md:flex md:flex-col md:gap-4 md:mt-0`}>
+                <li><Link href="/">Accueil</Link></li>
+                <li><Link href="/CV">CV</Link></li>
+            </ul>
+        </nav>
   )
 }
