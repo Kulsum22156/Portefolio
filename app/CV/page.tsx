@@ -14,7 +14,6 @@ export default function Cv() {
 
             <h2 className="text-2xl my-8">Expérience</h2>
             <CvEntry title="VFS Global" date="Mars 2022" description="Assistante & Relation client (stage)">
-                
             </CvEntry>
 
             <h2 className="text-2xl my-8">Projets</h2>
@@ -31,6 +30,9 @@ export default function Cv() {
             </CvEntry>
 
             <CvEntry title="Génie logiciel" date="2025-2026" description="Création d'une gestion de création de cassiers avec C#, en méthode Agile/Scrum et SQLite">
+            </CvEntry>
+
+            <CvEntry title="Deskop application" date="2025" description="Création d'un gestionnaire de parties d'échec (compétitions, tournois, joueurs) avec C#, Avalonia et SQLite">
             </CvEntry>
             
            
