@@ -1,4 +1,5 @@
 import CvEntry from "../components/CvEntry";
+import BlogEntry from "../components/blog";
 
 export default function Cv() {
     return (
@@ -12,9 +13,13 @@ export default function Cv() {
             <CvEntry title="Croix-Rouge de Belgique" date="2024-2029" description="BEPS - Brevet Européen Premiers Secours">
             </CvEntry>
 
+            <BlogEntry/>
+
             <h2 className="text-2xl my-8">Expérience</h2>
             <CvEntry title="VFS Global" date="Mars 2022" description="Assistante & Relation client (stage)">
             </CvEntry>
+
+            <BlogEntry/>
 
             <h2 className="text-2xl my-8">Projets</h2>
             <CvEntry title="Projet intégrateur" date="2022" description="Création d'une machine Low-Tech">
@@ -34,6 +39,8 @@ export default function Cv() {
 
             <CvEntry title="Deskop application" date="2025" description="Création d'un gestionnaire de parties d'échec (compétitions, tournois, joueurs) avec C#, Avalonia et SQLite">
             </CvEntry>
+            
+            <BlogEntry/>
             
            
         </>
