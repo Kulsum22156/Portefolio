@@ -31,8 +31,7 @@ export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     return (
         <nav className = "bg-purple-950 text-purple-50 shadow-xl">
-            <div className="flex text-xl justify-between font-bold text-fuchsia-50">
-                <div className="text-xl font-bold ">Umme Kulsum</div>
+            <div className="flex text-xl justify-start font-bold text-fuchsia-50">
                 <HamburgerMenu onClick={() => setIsOpen(!isOpen)}/></div>
             <ul className = {`container mx-auto flex gap-4
             ${isOpen? "flex" : "hidden"} justify-center md:flex md:flex-col md:gap-4 md:mt-0`}>
