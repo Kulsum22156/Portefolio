@@ -31,10 +31,10 @@ export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     return (
         <nav className = "bg-purple-950 text-purple-50 shadow-xl">
-            <div className="flex text-xl justify-start font-bold text-fuchsia-50">
+            <div className="flex text-xl font-bold text-fuchsia-50">
                 <HamburgerMenu onClick={() => setIsOpen(!isOpen)}/></div>
-            <ul className = {`container mx-auto flex gap-4
-            ${isOpen? "flex" : "hidden"} justify-center md:flex md:flex-col md:gap-4 md:mt-0`}>
+            <ul className = {`mt-4 flex-col flex gap-4
+            ${isOpen? "flex" : "hidden"}  md:flex md:flex-row md:gap-4 md:mt-0`}>
                 <li><Link href="/">Accueil</Link></li>
                 <li><Link href="/CV">CV</Link></li>
             </ul>
