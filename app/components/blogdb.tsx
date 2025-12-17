@@ -1,0 +1,25 @@
+import { getPosts } from "../lib/blog";
+import BlogFormEntry from "./blog"; 
+
+export default async function BlogBlock() {
+  const posts = await getPosts();
+
+  return (
+    <div>
+      <div className="grid grid-cols-1 md:grid-cols-2">
+        {posts.map(post => (
+          <div
+            key={post.id}
+            className="p-6 border border-purple-300 rounded-2xl shadow-sm mx-4 my-8"
+          >
+            <h4 className="text-xl font-bold text-purple-300">{post.title}</h4>
+            <p className="mb-2 text-purple-900">{post.date}</p>
+            <p className="text-sm text-purple-50">{post.content}</p>
+          </div>
+        ))}
+        <div>
+        <BlogFormEntry /></div>
+      </div>
+    </div>
+  );
+}
