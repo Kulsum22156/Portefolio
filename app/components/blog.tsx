@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 type BlogEntryProps = {
-  title: string;
+  title?: string;
 };
 
 export default function BlogFormEntry({ title }: BlogEntryProps) {
@@ -29,7 +29,7 @@ export default function BlogFormEntry({ title }: BlogEntryProps) {
       <h3 className="text-lg font-semibold text-purple-200 mb-4">
         {title}
       </h3>
-      <p className="text-xl text-purple-900 mb-8">
+      <p className="text-xl text-purple-300 mb-4">
         Entrez une nouvelle donnée :
       </p>
       <form onSubmit={handleSubmit} className="space-y-4">

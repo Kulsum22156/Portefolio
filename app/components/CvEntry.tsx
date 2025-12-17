@@ -13,7 +13,7 @@ export default function CvEntry({
   title, employer, children, date, subtitle, description}: CvEntryProps){
   return (
     <div>
-        <div className="p-4 border border-purple-300 rounded-2xl shadow-sm mx-4 my-8">
+        <div className="p-6 border border-purple-300 rounded-2xl shadow-sm mx-4 my-8">
             <div className="flex items-center justify-between"></div>
             <h3 className="text-xl font-bold text-purple-300">{title}</h3>
 
