@@ -8,7 +8,7 @@ export default async function BlogBlock({section}: BlogEntryProps){
 
   return (
     <div>
-      <div className="grid grid-cols-1 md:grid-cols-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {posts.map(post => (
           <div
             key={post.id}
@@ -19,7 +19,7 @@ export default async function BlogBlock({section}: BlogEntryProps){
             <p className="text-sm text-purple-50">{post.content}</p>
 
             <form action={deletePost.bind(null, post.id)}>
-            <button className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700">
+            <button className=" mt-8 bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700">
               Supprimer
             </button>
           </form>

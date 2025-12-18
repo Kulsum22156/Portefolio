@@ -13,7 +13,7 @@ export default function Cv() {
             <CvEntry title="ECAM" date="2022-maintenant" description="Bachelier en Sciences de l’Ingénieur Industrielle - Secteur Génie Electrique">
             </CvEntry>
 
-            <CvEntry title="Croix-Rouge de Belgique" date="2024-2029" description="BEPS - Brevet Européen Premiers Secours">
+            <CvEntry title="Croix-Rouge de Belgique" date="2024" description="BEPS - Brevet Européen Premiers Secours">
             </CvEntry>
 
             <BlogBlock section="formations" /></div>
@@ -41,7 +41,7 @@ export default function Cv() {
             <CvEntry title="PCB" date="2025-2026" description="Réalisation de cartes PCB avec Altium Designer">
             </CvEntry>
 
-            <CvEntry title="Génie logiciel" date="2025-2026" description="Création d'une gestion de création de cassiers avec C#, en méthode Agile/Scrum et SQLite">
+            <CvEntry title="Génie logiciel" date="2025-2026" description="Création d'une gestion de création de cassiers avec C#, en méthode Agile/Scrum et SQL/MariaDB">
             </CvEntry>
 
             <CvEntry title="Deskop application" date="2025" description="Création d'un gestionnaire de parties d'échec (compétitions, tournois, joueurs) avec C#, Avalonia et SQLite">
