@@ -16,7 +16,7 @@ export default function Cv() {
             <CvEntry title="Croix-Rouge de Belgique" date="2024-2029" description="BEPS - Brevet Européen Premiers Secours">
             </CvEntry>
 
-            <BlogBlock /></div>
+            <BlogBlock section="formations" /></div>
 
             <h2 className="text-2xl md:text-3xl md:text-center my-4 font-bold">Expérience</h2>
 
@@ -24,7 +24,7 @@ export default function Cv() {
             <CvEntry title="VFS Global" date="Mars 2022" description="Assistante & Relation client (stage)">
             </CvEntry>
 
-            <BlogBlock/></div>
+            <BlogBlock section="experience"/></div>
 
             <h2 className="text-2xl md:text-3xl md:text-center my-4 font-bold">Projets</h2>
 
@@ -47,7 +47,7 @@ export default function Cv() {
             <CvEntry title="Deskop application" date="2025" description="Création d'un gestionnaire de parties d'échec (compétitions, tournois, joueurs) avec C#, Avalonia et SQLite">
             </CvEntry>
             
-            <BlogBlock/></div>
+            <BlogBlock section="projets"/></div>
             
            
         </>

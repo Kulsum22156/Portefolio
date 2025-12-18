@@ -4,9 +4,10 @@ import { createPost } from "../lib/blog";
 
 type BlogEntryProps = {
   title?: string;
-};
+  section: string;
+  };
 
-export default function BlogFormEntry({ title }: BlogEntryProps) {
+export default function BlogFormEntry({ title, section}: BlogEntryProps) {
 
   return (
     <div className="p-4 border border-dashed border-purple-400 rounded-2xl shadow-sm mx-4 my-8 ">
@@ -18,6 +19,7 @@ export default function BlogFormEntry({ title }: BlogEntryProps) {
         Entrez une nouvelle donnée :
       </p>
       <form action={createPost} className="space-y-4">
+      <input type="hidden" name="section" value={section} />
         <input
           name="title"
           placeholder="Titre... "

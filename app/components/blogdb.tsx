@@ -1,8 +1,10 @@
-import { getPosts } from "../lib/blog";
+import { getPosts, deletePost } from "../lib/blog";
 import BlogFormEntry from "./blog"; 
 
-export default async function BlogBlock() {
-  const posts = await getPosts();
+type BlogEntryProps = {section : string;};
+
+export default async function BlogBlock({section}: BlogEntryProps){
+  const posts = await getPosts(section);
 
   return (
     <div>
@@ -15,10 +17,16 @@ export default async function BlogBlock() {
             <h4 className="text-xl font-bold text-purple-300">{post.title}</h4>
             <p className="mb-2 text-purple-900">{post.date}</p>
             <p className="text-sm text-purple-50">{post.content}</p>
+
+            <form action={deletePost.bind(null, post.id)}>
+            <button className="mt-3 text-xl font-bold text-purple-300">
+              Supprimer
+            </button>
+          </form>
           </div>
         ))}
         <div>
-        <BlogFormEntry /></div>
+        <BlogFormEntry section ={section}/></div>
       </div>
     </div>
   );
