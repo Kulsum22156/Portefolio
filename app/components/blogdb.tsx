@@ -19,7 +19,7 @@ export default async function BlogBlock({section}: BlogEntryProps){
             <p className="text-sm text-purple-50">{post.content}</p>
 
             <form action={deletePost.bind(null, post.id)}>
-            <button className="mt-3 text-xl font-bold text-purple-300">
+            <button className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700">
               Supprimer
             </button>
           </form>
